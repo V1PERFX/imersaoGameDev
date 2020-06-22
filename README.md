@@ -1,5 +1,5 @@
 # JavaScript Game Dev
-criando um jogo, com o P5JS e JavaScript.
+Criando um jogo, com o P5JS e JavaScript.
 
 ## Aula 1
 * Primeiras animações.
