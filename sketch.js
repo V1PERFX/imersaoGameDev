@@ -15,70 +15,70 @@ let inimigo;
 let inimigoGrande;
 let inimigoVoador;
 
-const matrizInimigo = [
-  [0, 0],
-  [134, 0],
-  [268, 0],
-  [402, 0],
-  [0, 133],
-  [134, 133],
-  [268, 133],
-  [402,133],
-  [0, 266],
-  [134, 266],
-  [268, 266],
-  [402, 266],
-  [0, 399],
-  [134, 399],
-  [268, 399],
-  [402, 399],
-];
 const matrizPersonagem = [
   [0, 0],
-  [131, 0],
-  [262, 0],
-  [393, 0],
-  [0, 142],
-  [131, 142],
-  [262, 142],
-  [393, 142],
+  [68, 0],
+  [136, 0],
+  [204, 0],
+  [0, 106],
+  [68, 106],
+  [136, 106],
+  [204, 106],
+];
+const matrizInimigo = [
+  [0, 0],
+  [71, 0],
+  [142, 0],
+  [213, 0],
+  [0, 98],
+  [71, 98],
+  [142, 98],
+  [213, 98],
+  [0, 196],
+  [71, 196],
+  [142, 196],
+  [213, 196],
+  [0, 294],
+  [71, 294],
+  [142, 294],
+  [213, 294],
 ];
 const matrizInimigoGrande = [
   [0, 0],
-  [129, 0],
-  [258, 0],
-  [387, 0],
-  [0, 130],
-  [129, 130],
-  [258, 130],
-  [387, 130],
-  [0, 260],
-  [129, 260],
-  [258, 260],
-  [387, 260],
-  [0, 390],
-  [129, 390],
-  [258, 390],
+  [72, 0],
+  [144, 0],
+  [216, 0],
+  [0, 104],
+  [72, 104],
+  [144, 104],
+  [216, 104],
+  [0, 208],
+  [72, 208],
+  [144, 208],
+  [216, 208],
+  [0, 312],
+  [72, 312],
+  [144, 312],
 ];
 const matrizInimigoVoador = [
   [0, 0],
   [72, 0],
   [144, 0],
   [216, 0],
-  [0, 96],
-  [72, 96],
-  [144, 96],
-  [216, 96],
-  [0, 192],
-  [72, 192],
-  [144, 192],
-  [216, 192],
-  [0, 288],
-  [72, 288],
-  [144, 288],
-  [216, 288],
-  [0, 384],
-  [72, 384],
+  [0, 98],
+  [72, 98],
+  [144, 98],
+  [216, 98],
+  [0, 196],
+  [72, 196],
+  [144, 196],
+  [216, 196],
+  [0, 294],
+  [72, 294],
+  [144, 294],
+  [216, 294],
+  [0, 392],
+  [72, 392],
 ];
 
 const inimigos = [];
@@ -100,13 +100,13 @@ function setup() {
   cenario = new Cenario(imagemCenario, 3);
   pontuacao = new Pontuacao();
 
-  personagem = new Personagem(matrizPersonagem, imagemPersonagem, 0, 30, 131, 142, 131, 142);
+  personagem = new Personagem(matrizPersonagem, imagemPersonagem, 80, 125, 68, 106, 68, 106);
 
-  const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 134, 30, 134, 133, 134, 133, 4, 200);
+  const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 134, 125, 71, 98, 71, 98, 5, 200);
 
-  const inimigoVoador = new Inimigo(matrizInimigoVoador, imagemInimigoVoador, width - 72, 250, 72, 96, 72, 96, 6, 1500);
+  const inimigoVoador = new Inimigo(matrizInimigoVoador, imagemInimigoVoador, width - 72, 275, 72, 98, 72, 98, 6, 1500);
 
-  const inimigoGrande = new Inimigo(matrizInimigoGrande, imagemInimigoGrande, width, 30, 129, 130, 129, 130, 3, 2500);
+  const inimigoGrande = new Inimigo(matrizInimigoGrande, imagemInimigoGrande, width, 125, 72, 104, 72, 104, 4, 2500);
 
   inimigos.push(inimigo);
   inimigos.push(inimigoVoador);
