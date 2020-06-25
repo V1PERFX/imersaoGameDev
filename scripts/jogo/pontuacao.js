@@ -1,4 +1,4 @@
-class  Pontuacao {
+class Pontuacao {
     constructor() {
         this.pontos = 0;
     }
@@ -6,6 +6,8 @@ class  Pontuacao {
     exibe() {
         textAlign(RIGHT);
         fill('#FFF');
+        stroke('#FF3333');
+        strokeWeight(4);
         textSize(50);
         text(parseInt(this.pontos), width - 30, 50);
     }

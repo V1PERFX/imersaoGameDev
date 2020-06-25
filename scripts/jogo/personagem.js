@@ -15,6 +15,7 @@ class Personagem extends Animacao {
         if(this.pulos < 2) {
             this.velocidadePulo = this.alturaPulo;
             this.pulos++;
+            somDoPulo.play();
         }
     }
 
@@ -34,7 +35,7 @@ class Personagem extends Animacao {
         rect(this.x, this.y, this.largura, this.altura);
         rect(inimigo.x, inimigo.y, inimigo.largura, inimigo.altura);
          /.DEBUG */
-        const precisao = .5;
+        const precisao = .6;
         const colisao = collideRectRect(this.x, this.y, this.largura * precisao, this.altura * precisao, inimigo.x, inimigo.y, inimigo.largura * precisao, inimigo.altura * precisao);
 
         return colisao;
