@@ -7,7 +7,7 @@ class Jogo {
         cenario = new Cenario(imagemCenario, 3);
         pontuacao = new Pontuacao();
 
-        personagem = new Personagem(matrizPersonagem, imagemPersonagem, 80, 125, 68, 106, 68, 106);
+        personagem = new Personagem(matrizPersonagem, imagemPersonagem, 200, 125, 68, 106, 68, 106);
 
         const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 134, 125, 71, 98, 71, 98, 5, 100);
 
