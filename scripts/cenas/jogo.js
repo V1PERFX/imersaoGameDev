@@ -1,19 +1,21 @@
 class Jogo {
     constructor() {
-        this.inimigoAtual = 0;
+        this.indice = 0;
+        this.mapa = fita.mapa;
     }
 
     setup() {
         cenario = new Cenario(imagemCenario, 3);
         pontuacao = new Pontuacao();
+        vida = new Vida(fita.configuracoes.vidaMaxima, fita.configuracoes.vidaInicial);
 
         personagem = new Personagem(matrizPersonagem, imagemPersonagem, 200, 125, 68, 106, 68, 106);
 
-        const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 134, 125, 71, 98, 71, 98, 5, 100);
+        const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 134, 125, 71, 98, 71, 98, 5);
 
-        const inimigoVoador = new Inimigo(matrizInimigoVoador, imagemInimigoVoador, width - 72, 275, 72, 98, 72, 98, 6, 100);
+        const inimigoVoador = new Inimigo(matrizInimigoVoador, imagemInimigoVoador, width - 72, 275, 72, 98, 72, 98, 6);
 
-        const inimigoGrande = new Inimigo(matrizInimigoGrande, imagemInimigoGrande, width, 125, 72, 104, 72, 104, 4, 100);
+        const inimigoGrande = new Inimigo(matrizInimigoGrande, imagemInimigoGrande, width, 125, 72, 104, 72, 104, 4);
 
         inimigos.push(inimigo);
         inimigos.push(inimigoVoador);
@@ -30,29 +32,38 @@ class Jogo {
         cenario.exibe();
         cenario.move();
 
+        vida.draw();
+
         pontuacao.exibe();
         pontuacao.adicionarPonto();
 
         personagem.exibe();
         personagem.aplicaGravidade();
 
-        const inimigo = inimigos[this.inimigoAtual];
+        const linhaAtual = this.mapa[this.indice];
+        const inimigo = inimigos[linhaAtual.inimigo];
         const inimigoVisivel = inimigo.x < -inimigo.largura;
+
+        inimigo.velocidade = linhaAtual.velocidade;
 
         inimigo.exibe();
         inimigo.move();
 
         if (inimigoVisivel) {
-            this.inimigoAtual++;
-            if (this.inimigoAtual > 2) {
-                this.inimigoAtual = 0;
+            this.indice++;
+            inimigo.aparece();
+            if (this.indice > this.mapa.length - 1) {
+                this.indice = 0;
             }
-            inimigo.velocidade = parseInt(random(5, 30));
         }
 
         if (personagem.estaColidindo(inimigo)) {
-            image(imagemGameOver, width / 2 - 215, height / 3);
-            noLoop();
+            vida.perdeVida();
+            personagem.tonarInvencivel();
+            if(vida.vidas === 0 ) {
+                image(imagemGameOver, width / 2 - 215, height / 3);
+                noLoop();
+            }
         }
     }
 }
