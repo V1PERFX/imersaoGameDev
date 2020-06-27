@@ -1,12 +1,10 @@
 class TelaInicial {
     constructor() {
-
     }
 
     draw() {
         this._imagemFundo();
         this._texto();
-        this._botao();
     }
 
     _imagemFundo() {
@@ -16,15 +14,21 @@ class TelaInicial {
     _texto() {
         textFont(fonteTelaInicial);
         textAlign(CENTER);
-        fill('#FFF');
+        fill('#FFCC00');
         stroke('#FF3333');
         strokeWeight(6);
         textSize(150);
-        text('HERO DASH', width / 2, height / 2);
+        text('HERO DASH', width / 2, height / 2 - 50);
+        fill('#FFF');
+        stroke('#FF3333');
+        strokeWeight(3);
+        textSize(35);
+        text('precione ENTER para iniciar', width / 2, height / 2 + 180);
     }
 
-    _botao() {
-        botaoGerenciador.y = height / 6 * 5;
-        botaoGerenciador.draw();
+    keyPressed(key) {
+        if(key === 'Enter'){
+            cenaAtual = 'jogo';
+        }
     }
 }

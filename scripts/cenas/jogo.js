@@ -13,7 +13,7 @@ class Jogo {
 
         const inimigo = new Inimigo(matrizInimigo, imagemInimigo, width - 134, height / 5, 71, 98, 71, 98, 5);
 
-        const inimigoVoador = new Inimigo(matrizInimigoVoador, imagemInimigoVoador, width - 72, height / 6 * 3, 72, 98, 72, 98, 6);
+        const inimigoVoador = new Inimigo(matrizInimigoVoador, imagemInimigoVoador, width - 72, height / 6.66 * 3, 72, 98, 72, 98, 6);
 
         const inimigoGrande = new Inimigo(matrizInimigoGrande, imagemInimigoGrande, width, height / 5, 72, 104, 72, 104, 4);
 

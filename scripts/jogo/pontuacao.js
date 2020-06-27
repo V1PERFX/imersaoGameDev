@@ -13,6 +13,6 @@ class Pontuacao {
     }
 
     adicionarPonto() {
-        this.pontos = this.pontos + 0.2;
+        this.pontos = this.pontos + 0.1;
     }
 }

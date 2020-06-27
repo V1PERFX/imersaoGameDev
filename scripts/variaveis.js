@@ -14,7 +14,6 @@ let fita;
 let cenaAtual = 'telaInicial';
 let cenas;
 let telaInicial;
-let botaoGerenciador;
 let vida;
 
 let somDoPulo;

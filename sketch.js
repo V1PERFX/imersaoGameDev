@@ -10,11 +10,11 @@ function setup() {
     jogo,
     telaInicial
   };
-  botaoGerenciador = new BotaoGerenciador('iniciar', 500, 255);
 }
 
 function keyPressed() {
   jogo.keyPressed(key);
+  telaInicial.keyPressed(key);
 }
 
 function draw() {

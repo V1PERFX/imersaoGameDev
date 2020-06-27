@@ -19,23 +19,3 @@ canvas {
   border-radius: 1.6rem;
   box-shadow: 0px 10px 0px 0px #2D2D38;
 }
-
-.botao-tela-inicial {
-  font-family: 'Carter One', cursive;
-  padding: 1rem 8rem;
-  font-size: 1.5rem;
-  letter-spacing: .25rem;
-  box-shadow: 0px 10px 0px 0px #FF3333;
-  text-transform: uppercase;
-  background-color: #FFCC00;
-  border: 3px solid;
-  border-color: #FF3333;
-  border-radius: 1.7rem;
-  color: #FFF;
-  text-shadow: 0px 2px #FF3333;
-}
-
-.botao-tela-inicial:hover {
-  background-color: #FFCC00;
-  box-shadow: 0px 6px 0px 0px #FF3333;
-}
