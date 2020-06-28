@@ -11,7 +11,7 @@ class Vida {
     }
 
     draw() {
-        for(let i = 0 ; i < this.vidas; i++) {
+        for (let i = 0; i < this.vidas; i++) {
             const margem = i * 40;
             const posicao = this.xInicial * (i + 1);
             image(imagemVida, posicao + margem, this.y, this.largura, this.altura);
@@ -19,7 +19,7 @@ class Vida {
     }
 
     ganhaVida() {
-        if(this.vidas <= this.total) {
+        if (this.vidas <= this.total) {
             this.vidas++;
         }
     }

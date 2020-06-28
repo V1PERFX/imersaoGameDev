@@ -5,8 +5,13 @@ class Jogo {
     }
 
     setup() {
-        cenario = new Cenario(imagemCenario, 3);
+        cenarioCeu = new Cenario(imagemCenaCeu, 0);
+        cenarioArvores = new Cenario(imagemCenaArvores, 1);
+        cenarioChao = new Cenario(imagemCenaChao, 4);
+        cenarioNuvens = new Cenario(imagemCenaNuvens, 0.90);
+
         pontuacao = new Pontuacao();
+
         vida = new Vida(fita.configuracoes.vidaMaxima, fita.configuracoes.vidaInicial);
 
         personagem = new Personagem(matrizPersonagem, imagemPersonagem, 200, height / 5, 68, 106, 68, 106);
@@ -29,8 +34,14 @@ class Jogo {
     }
 
     draw() {
-        cenario.exibe();
-        cenario.move();
+        cenarioCeu.exibe();
+        cenarioNuvens.exibe();
+        cenarioArvores.exibe();
+        cenarioChao.exibe();
+
+        cenarioNuvens.move();
+        cenarioArvores.move();
+        cenarioChao.move();
 
         vida.draw();
 
@@ -60,8 +71,9 @@ class Jogo {
         if (personagem.estaColidindo(inimigo)) {
             vida.perdeVida();
             personagem.tonarInvencivel();
-            if(vida.vidas === 0 ) {
+            if (vida.vidas === 0) {
                 image(imagemGameOver, width / 2 - 215, height / 3);
+                somDoJogo.stop();
                 noLoop();
             }
         }

@@ -23,12 +23,18 @@ class TelaInicial {
         stroke('#FF3333');
         strokeWeight(3);
         textSize(35);
-        text('precione ENTER para iniciar', width / 2, height / 2 + 180);
+        text('precione ENTER para iniciar', width / 2, height / 2 + 160);
+        textSize(22);
+        fill('#262626');
+        noStroke();
+        text('aperte SETA PARA CIMA para PULAR ', width / 2, height / 2 + 220);
     }
 
     keyPressed(key) {
-        if(key === 'Enter'){
+        if (key === 'Enter') {
             cenaAtual = 'jogo';
+            somDoJogo.loop();
+            somDoJogo.setVolume(0.1);
         }
     }
 }

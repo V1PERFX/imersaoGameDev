@@ -1,7 +1,7 @@
 class Personagem extends Animacao {
     constructor(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite) {
         super(matriz, imagem, x, variacaoY, largura, altura, larguraSprite, alturaSprite);
-        
+
         this.variacaoY = variacaoY;
         this.yInicial = height - this.altura - this.variacaoY;
         this.y = this.yInicial;
@@ -13,7 +13,7 @@ class Personagem extends Animacao {
     }
 
     pula() {
-        if(this.pulos < 2) {
+        if (this.pulos < 2) {
             this.velocidadePulo = this.alturaPulo;
             this.pulos++;
             somDoPulo.play();
@@ -24,10 +24,10 @@ class Personagem extends Animacao {
         this.y = this.y + this.velocidadePulo;
         this.velocidadePulo = this.velocidadePulo + this.gravidade;
 
-        if(this.y > this.yInicial) {
+        if (this.y > this.yInicial) {
             this.y = this.yInicial;
             this.pulos = 0;
-        } 
+        }
     }
 
     tonarInvencivel() {
@@ -38,7 +38,7 @@ class Personagem extends Animacao {
     }
 
     estaColidindo(inimigo) {
-        if(this.invencivel) {
+        if (this.invencivel) {
             return false;
         }
         const precisao = .6;

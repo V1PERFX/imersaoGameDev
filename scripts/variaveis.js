@@ -1,4 +1,7 @@
-let imagemCenario;
+let imagemCenaCeu;
+let imagemCenaArvores
+let imagemCenaChao
+let imagemCenaNuvens
 let imagemPersonagem;
 let imagemInimigo;
 let imagemInimigoGrande;
@@ -6,8 +9,12 @@ let imagemInimigoVoador;
 let imagemGameOver;
 let imagemTelaInicial;
 let imagemVida;
+
 let fonteTelaInicial;
-let cenario;
+let cenarioCeu;
+let cenarioArvores;
+let cenarioChao;
+let cenarioNuvens;
 let jogo;
 let fita;
 
