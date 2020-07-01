@@ -1,3 +1,4 @@
+/* IMAGENS */
 let imagemCenaCeu;
 let imagemCenaArvores
 let imagemCenaChao
@@ -10,31 +11,34 @@ let imagemInimigoVoador;
 let imagemGameOver;
 let imagemTelaInicial;
 let imagemVida;
-
-let fonteTelaInicial;
+/* CENARIO */
 let cenarioCeu;
 let cenarioArvores;
 let cenarioChao;
 let cenarioNuvens;
+/* JOGO */
 let jogo;
 let fita;
-
+let fonteTelaInicial;
 let cenaAtual = 'telaInicial';
 let cenas;
 let telaInicial;
 let vida;
-
+let pontuacao;
+/* SONS */
 let somDoPulo;
 let somDoJogo;
 let somDoHit;
-let pontuacao;
-
+/* PERSONAGEM */
 let personagem;
 let personagemPulando;
+/* INIMIGOS */
 let inimigo;
 let inimigoGrande;
 let inimigoVoador;
+const inimigos = [];
 
+/* MATRIZES PERSONAGEM E INIMIGOS */
 const matrizPersonagem = [
   [0, 0],
   [68, 0],
@@ -103,5 +107,3 @@ const matrizInimigoVoador = [
   [0, 392],
   [72, 392],
 ];
-
-const inimigos = [];

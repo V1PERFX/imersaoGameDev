@@ -9,7 +9,7 @@ class Pontuacao {
         stroke('#FF3333');
         strokeWeight(4);
         textSize(50);
-        text(parseInt(this.pontos), width - 30, 50);
+        text(parseInt(this.pontos), width - 30, 60);
     }
 
     adicionarPonto() {
