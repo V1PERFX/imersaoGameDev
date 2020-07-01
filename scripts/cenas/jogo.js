@@ -70,6 +70,7 @@ class Jogo {
 
         if (personagem.estaColidindo(inimigo)) {
             vida.perdeVida();
+            somDoHit.setVolume(0.1);
             somDoHit.play();
             personagem.tonarInvencivel();
             if (vida.vidas === 0) {
