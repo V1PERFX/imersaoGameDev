@@ -70,6 +70,7 @@ class Jogo {
 
         if (personagem.estaColidindo(inimigo)) {
             vida.perdeVida();
+            somDoHit.play();
             personagem.tonarInvencivel();
             if (vida.vidas === 0) {
                 image(imagemGameOver, width / 2 - 215, height / 3);

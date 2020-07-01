@@ -3,6 +3,7 @@ let imagemCenaArvores
 let imagemCenaChao
 let imagemCenaNuvens
 let imagemPersonagem;
+let imagemPersonagemPulando;
 let imagemInimigo;
 let imagemInimigoGrande;
 let imagemInimigoVoador;
@@ -25,9 +26,11 @@ let vida;
 
 let somDoPulo;
 let somDoJogo;
+let somDoHit;
 let pontuacao;
 
 let personagem;
+let personagemPulando;
 let inimigo;
 let inimigoGrande;
 let inimigoVoador;
@@ -41,6 +44,9 @@ const matrizPersonagem = [
   [68, 106],
   [136, 106],
   [204, 106],
+];
+const matrizPersonagemPulando = [
+  [0, 0],
 ];
 const matrizInimigo = [
   [0, 0],

@@ -5,6 +5,7 @@ function preload() {
   imagemCenaNuvens = loadImage('images/cenario/nuvens.png');
   imagemGameOver = loadImage('images/assets/gameOver.png');
   imagemPersonagem = loadImage('images/personagem/personagemCorrendo.png');
+  imagemPersonagemPulando = loadImage('images/personagem/personagemPulando.png');
   imagemInimigo = loadImage('images/inimigos/enfermeira.png');
   imagemInimigoVoador = loadImage('images/inimigos/enfermeiroVoo.png');
   imagemInimigoGrande = loadImage('images/inimigos/doutor.png');
@@ -16,4 +17,5 @@ function preload() {
 
   somDoJogo = loadSound('sounds/trilhaJogo.mp3');
   somDoPulo = loadSound('sounds/somPulo.mp3');
+  somDoHit = loadSound('sounds/somHit.wav');
 }

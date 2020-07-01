@@ -13,8 +13,11 @@ class Personagem extends Animacao {
     }
 
     pula() {
-        if (this.pulos < 2) {
+        if (this.pulos < 2 && cenaAtual === 'jogo') {
             this.velocidadePulo = this.alturaPulo;
+            this.matriz = matrizPersonagemPulando;
+            this.frameAtual = 0;
+            this.imagem = imagemPersonagemPulando;
             this.pulos++;
             somDoPulo.play();
         }
@@ -27,6 +30,11 @@ class Personagem extends Animacao {
         if (this.y > this.yInicial) {
             this.y = this.yInicial;
             this.pulos = 0;
+            this.matriz = matrizPersonagem;
+            if (this.frameAtual > this.matriz.lenght) {
+                this.frameAtual = 0;
+            }
+            this.imagem = imagemPersonagem;
         }
     }
 
@@ -35,6 +43,12 @@ class Personagem extends Animacao {
         setTimeout(() => {
             this.invencivel = false;
         }, 1000);
+    }
+
+    exibe() {
+        if (!this.invencivel || (frameCount % 8) > 2) {
+            super.exibe();
+        }
     }
 
     estaColidindo(inimigo) {
