@@ -15,10 +15,10 @@
   <img alt="Last Commit" src="https://img.shields.io/github/last-commit/V1PERFX/imersaoGameDev?style=flat">
 </p>
 
-<h3 align="center">
+<h4 align="center">
   <p>Nesse jogo endless runner você ajudará o herói a fugir dos doutores loucos que querem testar um vírus nele.</p>
   <p>Projeto feito durante a Imersão Game Dev da Alura.</p>
-</h3>
+</h4>
 
 
 <p align="center">
