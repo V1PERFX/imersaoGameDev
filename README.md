@@ -18,6 +18,7 @@
 <h4 align="center">
   <p>Nesse jogo endless runner você ajudará o herói a fugir dos doutores loucos que querem testar um vírus nele.</p>
   <p>Projeto feito durante a Imersão Game Dev da Alura.</p>
+  <p><a href="https://imersao-gamedev.github.io/placar/">Projeto ficou em 5º lugar na seleçao da Alura</a></p>
 </h4>
 
 
